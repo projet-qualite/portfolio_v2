@@ -1,0 +1,22 @@
+:host{
+    
+    .elements{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 70%;
+    }
+
+    .bar{
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-40%, -50%);
+        width: 5px;
+        height: 58%;
+        background-color: #C5C5C5;
+        z-index: -1;
+
+    }
+}

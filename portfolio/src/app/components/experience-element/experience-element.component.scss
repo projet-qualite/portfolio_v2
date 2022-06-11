@@ -1,0 +1,48 @@
+:host{
+    display: block;
+    margin-top: 20px;
+
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .experience-element::before{
+        content: "";
+        height: 30px;
+        width: 30px;
+        background-color: #0074B6;
+        border-radius: 100%;
+        left: -37px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .year{
+        background: #0074B6;
+        border-radius: 5px;
+        padding: 10px;
+        width: 200px;
+        color: white;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .company-type{
+        font-size: 1rem;
+        color: #000000;
+    }
+    .place{
+        font-size: 1rem;
+        color: #747474;
+    }
+
+    .details{
+        background: #000000;
+        border-radius: 5px;
+        padding: 10px;
+        width: 50px;
+        color: white;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="modal">
+    <h2 class="header">{{ header }}</h2>
+    <h4 class="body-title">Description: </h4>
+    <p class="body">{{ body }}</p>
+    <div class="technologies">
+        <span *ngFor="let techno of technologies" class="techno">{{techno}}</span>
+    </div>
+    <hr>
+    <div class="footer" (click)="closeModal()">
+        <div class="close-btn">
+            Fermer
+        </div>
+    </div>
+</div>

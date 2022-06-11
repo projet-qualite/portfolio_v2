@@ -1,0 +1,24 @@
+<app-modal 
+    id="modal-experience"
+    [header]="getHeader(experienceSelected)" 
+    [body]="experienceSelected.description" 
+    [technologies]="experienceSelected.technologies"
+>
+</app-modal>
+<div class="formations">
+    <div class="elements">
+      <app-experience-element
+        *ngFor="let experience of listExperiences"
+        [year]="experience.year"
+        [place]="experience.place"
+        [type]="experience.type"
+        [company]="experience.company"
+        [id]="experience.id"
+        (openDetail)="openModal($event)"
+        >
+      </app-experience-element>
+    </div>
+    <div class="bar"></div>
+  
+  </div>
+  

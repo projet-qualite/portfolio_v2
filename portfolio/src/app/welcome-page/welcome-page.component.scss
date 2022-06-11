@@ -1,0 +1,32 @@
+:host{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-30%, -36%);
+    width: 100%;
+    
+
+    h2{
+        font-size: 5rem;
+    }
+    p{
+        font-size: 1.5rem;
+        color: #656565
+    }
+
+    p.biography{
+        margin-top: 30px;
+        width: 70%;
+        font-size: .8rem;
+    }
+
+    .cv{
+        background: #0074B6;
+        border-radius: 10px;
+        padding: 10px;
+        width: 150px;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+}

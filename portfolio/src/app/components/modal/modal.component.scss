@@ -1,0 +1,65 @@
+:host(.hidden){
+    display: none;
+}
+:host(.visible){
+    display: block;
+}
+:host{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(9, 30, 66, 0.54);
+    border-radius: 5px;
+    display: none;
+    z-index: 3;
+
+    .modal{
+        height: 80%;
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255, 255, 255);
+        border-radius: 3px;
+        box-shadow: rgb(9 30 66 / 8%) 0px 0px 0px 1px, rgb(9 30 66 / 8%) 0px 2px 1px, rgb(9 30 66 / 31%) 0px 0px 20px -6px;
+        color: rgb(9, 30, 66);
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        outline: 0px;
+        pointer-events: auto;
+        padding: 20px;
+
+        .body-title{
+            margin-bottom: 10px;
+        }
+        .header{
+            margin-bottom: 30px;
+        }
+
+        .technologies{
+            margin-top: 20px;
+        }
+
+        .techno{
+            height: 15px;
+            padding: 10px;
+            margin-right: 5px;
+            background-color: wheat;
+        }
+
+        .footer{
+            position: absolute;
+            bottom: 20px;
+            right: 18px;
+            background-color: blue;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}

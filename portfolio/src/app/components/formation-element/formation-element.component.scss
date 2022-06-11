@@ -1,0 +1,52 @@
+:host{
+    display: block;
+    margin-top: 20px;
+    .top, .bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+
+        div{
+            margin-left: 10px;
+        }
+    }
+
+    .top::before{
+        content: "";
+        height: 30px;
+        width: 30px;
+        background-color: #0074B6;
+        border-radius: 100%;
+        left: -37px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .year{
+        background: #0074B6;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100px;
+        color: white;
+        text-align: center;
+    }
+
+    .school{
+        font-size: 1.3rem;
+        color: #00573D;
+        text-transform: uppercase;
+    }
+    .place{
+        font-size: 1.1rem;
+        color: #00C087;
+    }
+
+    .details{
+        background: #000000;
+        border-radius: 5px;
+        padding: 10px;
+        width: 50px;
+        color: white;
+    }
+}
