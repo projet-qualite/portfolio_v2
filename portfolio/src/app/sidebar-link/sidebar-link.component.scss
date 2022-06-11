@@ -1,0 +1,22 @@
+:host{
+    .link{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 35px;
+        margin-left: 20px;
+        color: inherit;
+        p{
+            font-size: 1.1rem;
+        }
+
+        .icon{
+            width: 8px;
+            height: 18px;
+            background: #C4C4C4;
+            border-radius: 5px;
+            margin-left: 15px;
+        }
+    }
+
+    
+}
