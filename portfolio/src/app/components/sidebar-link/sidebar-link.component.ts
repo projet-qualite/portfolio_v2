@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SidebarLinkComponent implements OnInit {
   
   @Input() label: string = '';
+  @Input() link: string = ''
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getLink(){
+    return '#'+this.link
   }
 
 }

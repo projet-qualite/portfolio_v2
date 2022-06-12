@@ -5,8 +5,12 @@
     [technologies]="experienceSelected.technologies"
 >
 </app-modal>
-<div class="formations">
+<div class="experiences">
     <div class="elements">
+      <h2>
+        <span><span>Profesional experiences</span></span>
+        <span class="icon"></span>
+      </h2>
       <app-experience-element
         *ngFor="let experience of listExperiences"
         [year]="experience.year"
@@ -17,8 +21,6 @@
         (openDetail)="openModal($event)"
         >
       </app-experience-element>
-    </div>
-    <div class="bar"></div>
-  
+    </div>  
   </div>
   

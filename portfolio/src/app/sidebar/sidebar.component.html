@@ -1,8 +1,8 @@
 <div class="sidebar">
-    <app-sidebar-link [label]="'Accueil'"></app-sidebar-link>
-    <app-sidebar-link [label]="'Formation'"></app-sidebar-link>
-    <app-sidebar-link [label]="'Expériences'"></app-sidebar-link>
-    <app-sidebar-link [label]="'Projets'"></app-sidebar-link>
-    <app-sidebar-link [label]="'Hobbies'"></app-sidebar-link>
-    <app-sidebar-link [label]="'Contact'"></app-sidebar-link>
+    <app-sidebar-link [ngClass]="'selected'" (click)="getLink('')" [label]="'Home'"></app-sidebar-link>
+    <app-sidebar-link (click)="getLink('experiences')" [label]="'Experiences'" [link]="'experiences'"></app-sidebar-link>
+    <app-sidebar-link (click)="getLink('education')" [label]="'Education'" [link]="'education'"></app-sidebar-link>
+    <app-sidebar-link (click)="getLink('projects')" [label]="'Projects'" [link]="'projects'"></app-sidebar-link>
+    <app-sidebar-link (click)="getLink('technos')" [label]="'Technos'" [link]="'technos'"></app-sidebar-link>
+    <app-sidebar-link (click)="getLink('contacts')" [label]="'Contacts'" [link]="'contacts'"></app-sidebar-link>
 </div>

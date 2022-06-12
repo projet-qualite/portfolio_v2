@@ -1,0 +1,10 @@
+<div class="project">
+    <div class="img">
+        <img [src]="getImagePath(image)" alt="">
+    </div>
+    <div class="bar"></div>
+    <div class="technologies">
+        <p *ngFor="let techno of technologies" class="techno">{{techno}}</p>
+    </div>
+    <p class="name">{{name}}</p>
+</div>

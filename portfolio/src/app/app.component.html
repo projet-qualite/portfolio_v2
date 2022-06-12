@@ -1,2 +1,6 @@
-<app-sidebar></app-sidebar>
-<router-outlet></router-outlet>
+<app-sidebar (linkEvent)="getLink($event)"></app-sidebar>
+<app-welcome-page></app-welcome-page>
+<app-experiences id="experiences"></app-experiences>
+<app-formation id="education"></app-formation>
+<app-projects id="projects"></app-projects>
+<app-contact id="contacts"></app-contact>

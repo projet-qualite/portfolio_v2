@@ -1,4 +1,21 @@
+:host(.selected){
+    .icon{ 
+       /*  background: #FF2E00 !important; */
+       display: none;
+    }
+
+    p{
+        transition: 1s;
+        border-radius: 5px;
+        padding: 5px;
+        background: #FF2E00 !important;
+        color: white
+    }
+
+
+}
 :host{
+
     .link{
         display: flex;
         justify-content: flex-end;
@@ -17,6 +34,4 @@
             margin-left: 15px;
         }
     }
-
-    
 }

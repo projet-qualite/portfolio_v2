@@ -1,0 +1,43 @@
+:host{
+    .elements{
+        transform: translate(31%);
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .img{
+            width: 50%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .description{
+
+            h2{
+                font-size: 3rem;
+            }
+
+            .job{
+                color: #6f6f6f;
+                font-size: 1.2rem;
+            }
+
+            .contacts{
+                .contact{
+                    margin-top: 20px;
+                    display: flex;
+
+                    img{
+                        width: 20px;
+                        margin-right: 20px;
+                    }
+
+                }
+                
+            }
+        }
+    }
+}

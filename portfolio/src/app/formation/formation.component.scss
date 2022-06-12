@@ -1,22 +1,58 @@
 :host{
-    
-    .elements{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-40%, -50%);
-        width: 70%;
+
+    .formations{
+        height: 100vh;
+        display: flex;
+        align-items: center;
     }
 
-    .bar{
-        position: absolute;
-        top: 50%;
-        left: 20%;
-        transform: translate(-40%, -50%);
-        width: 5px;
-        height: 58%;
-        background-color: #C5C5C5;
-        z-index: -1;
+    @mixin fadeAnimation($margin: 0px, $delay1: 0ms, $delay2: 200ms) {
+        > span{
+            overflow: hidden;
+            display: block;
 
+            &:nth-child(1) span{
+                animation-delay: $delay1;
+            }
+
+            &:nth-child(2) span{
+                animation-delay: $delay2;
+                margin-left: $margin;
+            }
+
+            > span{
+                transform: translateY(100%);
+                display: block;
+                animation: spanFadeIn 500ms ease forwards;
+            }
+        }
+    }
+    
+    .elements{
+        position: relative;
+        /* position: absolute;
+        top: 50%;
+        left: 50%; */
+        width: 70%;
+        transform: translate(25%);
+        background-color: #ffffff;
+        padding: 35px;
+        border-radius: 5px;
+        //transform: translate(31%, 86%);
+
+        h2{
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            @include fadeAnimation(_,2s);
+
+
+            .icon{
+                width: 0;
+                height: 5px;
+                background-color: #a8a8a8;
+                animation: 1.5s slidein linear forwards;
+            }
+        }
     }
 }

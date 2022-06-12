@@ -1,0 +1,15 @@
+:host{
+
+    .projects{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .elements{
+        transform: translate(20%);
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+}

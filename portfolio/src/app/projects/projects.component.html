@@ -1,0 +1,19 @@
+<app-modal 
+    id="modal-project"
+    [header]="projectSelected.type" 
+    [body]="projectSelected.description" 
+    [technologies]="projectSelected.technologies"
+>
+</app-modal>
+<div class="projects">
+    <div class="elements">
+      <app-project-element
+        *ngFor="let project of projectsList"
+        [image]="project.image"
+        [name]="project.name"
+        [technologies]="project.technologies"
+        >
+      </app-project-element>
+    </div>  
+</div>
+  
