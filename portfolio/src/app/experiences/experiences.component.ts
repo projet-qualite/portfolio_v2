@@ -12,25 +12,38 @@ export class ExperiencesComponent implements OnInit {
   listExperiences = [
     {
       id: 1,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.',
-      year: 'Janvier 2022 - Juillet 2022',
-      place: 'Paris, France',
-      type: 'Stage',
-      role: 'Développeur front-end',
-      company: 'Ophelia Sensors',
+      description: `In order to validate my Master degree, am currently on my graduation internship at Netatmo, an iOT 
+      company which build devices and software for smart home, i work as a front-end developper in a team of 12 people. 
+      Am responsible for adding new features in their Web app. For example, I created new feature for 
+      Velux app that will be call by the app as a Webview. The feature consists of allows the user to indicate if there is
+      an air-conditioner in his room and decide which moment he wanted open or close his window.
+      Also, i worked on the security app by migrating the app from Angular 8 to Angular 13 using state management with Ngrx
+      `,
+      year: 'January 2022 - July 2022',
+      place: 'Boulogne-Billancourt, France',
+      type: 'Graduation internship',
+      role: 'Front-end developper',
+      company: 'Netatmo',
+      link: '',
       technologies: [
         'Angular',
+        'Ngrx',
+        'Rxjs',
         'Chart JS',
       ]
     },
     {
       id: 2,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.',
-      year: 'Mai 2021 - Août 2021',
+      description: `From May 2021 to August 2021, i worked to Ophelia-Sensors as an intern. I worked as a front-end developper.
+        I was responsible for adding features in their web applications and remake their showcase website.
+        I have mainly work in Javascript
+      `,
+      year: 'May 2021 - August 2021',
       place: 'Paris, France',
-      type: 'Stage',
-      role: 'Développeur front-end',
-      company: 'Ophelia Sensors',
+      type: 'Intership',
+      role: 'Front-end developper',
+      company: 'Ophelia-Sensors',
+      link: '',
       technologies: [
         'Javascript',
         'OpenLayers',
@@ -40,10 +53,12 @@ export class ExperiencesComponent implements OnInit {
     },
     {
       id: 3,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.',
+      description: `This project consists of creating a web plateform to manage a media library. The mains features were: - Create an account, login an account, manage
+      different user permissions, borrow a media etc... We worked in pair on this project. You can find the github link just below.`,
       year: 'Octobre 2021 - Janvier 2022',
       place: 'Mulhouse, France',
-      type: 'Projet',
+      type: 'School Project',
+      link: 'https://github.com/Yeperllow/gestionMediatheque.git',
       company: 'Université de Haute-Alsace',
       technologies: [
         'Spring boot',
@@ -75,7 +90,7 @@ export class ExperiencesComponent implements OnInit {
   }
 
   openModal(id: number){
-    this.experienceSelected = this.listExperiences[id]
+    this.experienceSelected = this.listExperiences.filter(exp => exp.id === id)[0]
     document.getElementById('modal-experience')?.classList.add('visible')
   }
 

@@ -3,10 +3,12 @@
     top: 30%;
     left: 50%; */
     //transform: translate(20%, 50%);
-    transform: translate(20%);
-    width: 100%;
-
     .welcome{
+        transform: translate(20%);
+        width: 100%;
+    }
+
+    .elements{
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -67,5 +69,21 @@
         color: white;
         text-align: center;
         margin-top: 20px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 876px) {
+       .welcome{
+           transform: translateX(0);
+       }
+
+       .elements{
+            margin: auto;
+            width: 90%;
+        }
+
+       .biography{
+           width: 90%;
+       }
     }
 }

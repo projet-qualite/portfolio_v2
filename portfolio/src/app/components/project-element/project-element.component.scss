@@ -55,13 +55,15 @@
             width: 300px;
             border-radius: 5px;
             border: 1px solid #919191;
+            background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
 
             img{
-                height: 36%;
-                object-fit: cover;
+                height: 18%;
+                object-fit: contain;
             }
         }
 
@@ -71,5 +73,11 @@
             @include fadeAnimation(_,2s);
         }
    }
+
+   @media screen and (max-width: 480px) {
+        .projects{
+            margin-top: 50%;
+        }
+    }
 
 }

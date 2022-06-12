@@ -11,11 +11,15 @@ export class ProjectsComponent implements OnInit {
   projectsList = [
       {
         id: 1,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.',
-        type: 'Plateforme de prise de rendez-vous',
+        description: ` Doc & Moi, is a web and mobile Ivorian platform that allow to make an appointment to the doctor, 
+        I've been started to work on this since May 2021, it's currently in test phase.
+        3 differents users are managed by the platform: Doctor, Hospital, Patient
+        The mains features are: Create an account as a doctor or an hospital or a patient, login an account, Create a time slot, make an appointement, cancel etc...
+        `,
+        type: 'Web & Mobile',
         name: 'Doc et Moi',
-        link: 'www.doc-et-moi.com',
-        image: '',
+        link: 'https://www.doc-et-moi.com',
+        image: 'doc.png',
         state: 'test phase',
         technologies: [
           'Laravel',
@@ -24,10 +28,14 @@ export class ProjectsComponent implements OnInit {
       },
       {
         id: 2,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.',
-        type: 'Application mobile de location de voiture',
+        description: `Rapidkar is an Ivorian startup of linking of customers and sellers to rent or sell cars.
+        The website already exists and am responsible for making the mobile app.
+        To make that, i first created an api with Laravel and start to integrate this to the app am making in Flutter.
+        It's currently in developpment phase.
+        `,
+        type: 'Mobile app to rent or sell cars',
         name: 'Rapidkar',
-        link: 'www.rapidkar.com',
+        link: 'https://www.rapidkar.com',
         image: 'rapidkar.png',
         state: 'in progress',
         technologies: [
@@ -82,8 +90,7 @@ export class ProjectsComponent implements OnInit {
 
 
   openModal(id: number){
-    this.projectSelected = this.projectsList[id]
-    console.log(document.getElementsByClassName('app-modal'));
+    this.projectSelected = this.projectsList.filter(proj => proj.id === id)[0]
     document.getElementById('modal-project')?.classList.add('visible')
   }
 

@@ -3,6 +3,7 @@
     [header]="getHeader(experienceSelected)" 
     [body]="experienceSelected.description" 
     [technologies]="experienceSelected.technologies"
+    [link]="experienceSelected.link"
 >
 </app-modal>
 <div class="experiences">
@@ -17,6 +18,7 @@
         [place]="experience.place"
         [type]="experience.type"
         [company]="experience.company"
+        [link]="experience.link"
         [id]="experience.id"
         (openDetail)="openModal($event)"
         >

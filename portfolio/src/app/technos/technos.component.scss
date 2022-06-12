@@ -52,5 +52,23 @@
         align-items: center;
     }
 
+
+    @media screen and (max-width: 480px) {
+        .technos{
+            margin-top: 150%;
+            transform: translate(5%);
+        }
+
+        .elements{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        app-techno-element{
+            margin-top: 20px;
+        }
+    }
+
+
     
 }

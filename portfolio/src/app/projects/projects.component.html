@@ -3,6 +3,7 @@
     [header]="projectSelected.type" 
     [body]="projectSelected.description" 
     [technologies]="projectSelected.technologies"
+    [link]="projectSelected.link"
 >
 </app-modal>
 <div class="projects">
@@ -15,7 +16,9 @@
         *ngFor="let project of projectsList"
         [image]="project.image"
         [name]="project.name"
+        [id]="project.id"
         [technologies]="project.technologies"
+        (openDetail)="openModal($event)"
         >
       </app-project-element>
     </div>  

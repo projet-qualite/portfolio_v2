@@ -62,4 +62,14 @@
             cursor: pointer;
         }
     }
+
+
+    @media screen and (max-width: 480px) {
+        .modal{
+            height: 56%;
+            width: 76%;
+        }
+
+        
+    }
 }

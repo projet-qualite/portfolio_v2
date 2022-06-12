@@ -12,6 +12,7 @@ export class ExperienceElementComponent implements OnInit {
   @Input() company: string = ''
   @Input() type: string = ''
   @Input() place: string = ''
+  @Input() link: string = ''
   @Output() openDetail = new EventEmitter()
 
   constructor() { }

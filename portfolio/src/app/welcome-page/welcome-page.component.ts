@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomePageComponent implements OnInit {
 
 
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  downloadCV(){
+    window.open('/assets/CV.pdf', '_blank');
   }
 
 }

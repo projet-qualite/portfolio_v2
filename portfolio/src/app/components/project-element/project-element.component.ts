@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-project-element',
@@ -8,8 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProjectElementComponent implements OnInit {
 
   @Input() image: string = ''
+  @Input() id: number = 0
   @Input() name: string = ''
   @Input() technologies: string[] = []
+  @Output() openDetail = new EventEmitter()
   
 
   constructor() { }

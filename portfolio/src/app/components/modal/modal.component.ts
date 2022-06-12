@@ -9,6 +9,7 @@ export class ModalComponent implements OnInit {
 
   @Input() body: string = ''
   @Input() header: string = ''
+  @Input() link: string = ''
   @Input() technologies: string[] = []
 
   constructor() { }
@@ -17,8 +18,11 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal(){
-    document.getElementsByTagName('app-modal')[0].classList.remove('visible')
-    document.getElementsByTagName('app-modal')[0].classList.add('hidden')
+    const modals = document.getElementsByTagName('app-modal')
+    for(let i = 0 ; i < modals.length; i++){
+      modals[i].classList.remove('visible')
+      modals[i].classList.add('hidden')
+    }
   }
 
 }

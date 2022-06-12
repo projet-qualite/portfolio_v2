@@ -1,5 +1,9 @@
 <app-sidebar (linkEvent)="getLink($event)"></app-sidebar>
-<button (click)="openSidebar()" class="icon-btn"></button>
+<div (click)="openSidebar()" class="icon-btn">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
 <app-welcome-page class="app-el"></app-welcome-page>
 <app-experiences class="app-el" id="experiences"></app-experiences>
 <app-formation class="app-el"  id="education"></app-formation>

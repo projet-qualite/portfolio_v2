@@ -12,6 +12,13 @@ export class AppComponent {
   constructor(private router: Router){}
 
   getLink($event: string){
+      const sidebar = document.getElementsByClassName('sidebar')[0] as HTMLElement
+  
+      if(sidebar.classList.contains('visible')){
+        sidebar.classList.remove('visible')
+        sidebar.classList.add('unvisible')
+        document.getElementsByClassName('icon-btn')[0].classList.toggle('change')
+      }
     this.putAllAsUnselected()
     switch($event){
       case '':
@@ -51,9 +58,21 @@ export class AppComponent {
   }
 
   openSidebar(){
-    console.log("test")
     const sidebar = document.getElementsByClassName('sidebar')[0] as HTMLElement
-    sidebar.classList.add('visible')
+    const iconBtn = document.getElementsByClassName('icon-btn')[0]
+    iconBtn.classList.toggle('change')
+
+    
+
+    if(sidebar.classList.contains('visible')){
+      sidebar.classList.remove('visible')
+      sidebar.classList.add('unvisible')
+    }
+    else{
+      sidebar.classList.remove('unvisible')
+      sidebar.classList.add('visible')
+    }
+    
   }
 
 
