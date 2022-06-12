@@ -1,0 +1,14 @@
+<div class="technos">
+    <h2>
+        <span><span class="animate">Technos</span></span>
+        <span class="icon"></span>
+    </h2><br>
+    <div class="elements">
+        <app-techno-element 
+        *ngFor="let techno of technosList"
+        [name]="techno.name"
+        [image]="techno.image"
+        >
+        </app-techno-element>
+    </div>
+</div>

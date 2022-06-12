@@ -49,4 +49,12 @@ export class AppComponent {
       }
     }
   }
+
+  openSidebar(){
+    console.log("test")
+    const sidebar = document.getElementsByClassName('sidebar')[0] as HTMLElement
+    sidebar.classList.add('visible')
+  }
+
+
 }

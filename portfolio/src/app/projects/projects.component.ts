@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -52,6 +52,28 @@ export class ProjectsComponent implements OnInit {
   ]
 
   projectSelected: any = this.projectsList[0]
+
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event: any) {
+    const {clientHeight} = document.documentElement
+    const elements = document.getElementsByClassName('animate')
+
+    for(let i = 2; i < elements.length;i++){
+
+      if(elements[i] !== null){
+        const element = elements[i] as HTMLElement
+        
+        const yElementToViewport = element.getBoundingClientRect().y
+        const heightElementToViewport = element.getBoundingClientRect().height
+  
+        if(clientHeight > (yElementToViewport + heightElementToViewport*2/3)){
+          element.style.animation = "spanFadeIn 1s forwards cubic-bezier(0.87, 0, 0.13, 1)"
+        }
+      }
+
+    }
+  }
 
   constructor() { }
 

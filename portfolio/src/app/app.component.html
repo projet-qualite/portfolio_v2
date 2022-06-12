@@ -1,6 +1,8 @@
 <app-sidebar (linkEvent)="getLink($event)"></app-sidebar>
-<app-welcome-page></app-welcome-page>
-<app-experiences id="experiences"></app-experiences>
-<app-formation id="education"></app-formation>
-<app-projects id="projects"></app-projects>
-<app-contact id="contacts"></app-contact>
+<button (click)="openSidebar()" class="icon-btn"></button>
+<app-welcome-page class="app-el"></app-welcome-page>
+<app-experiences class="app-el" id="experiences"></app-experiences>
+<app-formation class="app-el"  id="education"></app-formation>
+<app-projects class="app-el"  id="projects"></app-projects>
+<app-technos class="app-el"  id="technos"></app-technos>
+<app-contact class="app-el" id="contacts"></app-contact>

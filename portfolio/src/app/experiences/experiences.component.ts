@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-experiences',
@@ -54,6 +54,21 @@ export class ExperiencesComponent implements OnInit {
 
   experienceSelected: any = this.listExperiences[0]
 
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event: any) {
+    const {clientHeight} = document.documentElement
+    const element = document.getElementsByClassName('animate')[0] as HTMLElement
+    
+    if(element !== null){
+      const yElementToViewport = element.getBoundingClientRect().y
+      const heightElementToViewport = element.getBoundingClientRect().height
+
+      if(clientHeight > (yElementToViewport + heightElementToViewport*2/3)){
+        element.style.animation = "spanFadeIn 1s forwards cubic-bezier(0.87, 0, 0.13, 1)"
+      }
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -61,7 +76,6 @@ export class ExperiencesComponent implements OnInit {
 
   openModal(id: number){
     this.experienceSelected = this.listExperiences[id]
-    console.log(document.getElementsByClassName('app-modal'));
     document.getElementById('modal-experience')?.classList.add('visible')
   }
 

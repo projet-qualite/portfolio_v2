@@ -11,6 +11,27 @@
             background-color: #646464;
        }
 
+       @mixin fadeAnimation($margin: 0px, $delay1: 0ms, $delay2: 200ms) {
+        > span{
+            overflow: hidden;
+            display: block;
+
+            &:nth-child(1) span{
+                animation-delay: $delay1;
+            }
+
+            &:nth-child(2) span{
+                animation-delay: $delay2;
+                margin-left: $margin;
+            }
+
+            > span{
+                transform: translateY(100%);
+                display: block;
+            }
+        }
+    }
+
        .technologies{
            display: flex;
 
@@ -47,6 +68,7 @@
         .name{
             font-size: 1.4rem;
             font-weight: bold;
+            @include fadeAnimation(_,2s);
         }
    }
 

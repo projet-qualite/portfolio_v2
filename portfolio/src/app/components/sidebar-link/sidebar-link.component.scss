@@ -1,11 +1,10 @@
 :host(.selected){
     .icon{ 
-       /*  background: #FF2E00 !important; */
        display: none;
     }
 
     p{
-        transition: 1s;
+        transition: 500ms;
         border-radius: 5px;
         padding: 5px;
         background: #FF2E00 !important;
@@ -32,6 +31,20 @@
             background: #C4C4C4;
             border-radius: 5px;
             margin-left: 15px;
+        }
+    }
+
+    @media screen and (max-width: 876px) {
+        .link{   
+            justify-content: flex-start;
+        }
+
+        .icon{
+            display: none;
+        }
+        .visible{
+            transform: translateX(0);
+            transition: 1s;
         }
     }
 }

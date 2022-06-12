@@ -1,5 +1,31 @@
 :host{
-    position: fixed;
-    top: 50%;
-    transform: translateY(-70%);
+
+    .sidebar{
+        position: fixed;
+        top: 50%;
+        transform: translateY(-70%);
+    }
+    
+
+    @media screen and (max-width: 876px) {
+        .sidebar{   
+            background-color: white; 
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            transform: translateY(0);
+            transform: translateX(200%);
+            z-index: 2;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .visible{
+            transform: translateX(0);
+            transition: 1s;
+        }
+    }
 }

@@ -13,7 +13,9 @@ import { ProjectElementComponent } from './components/project-element/project-el
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { SidebarLinkComponent } from './components/sidebar-link/sidebar-link.component';
 import { ContactComponent } from './contact/contact.component';
-import { Router, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { TechnoElementComponent } from './components/techno-element/techno-element.component';
+import { TechnosComponent } from './technos/technos.component';
 
 
 const routes: Routes = [
@@ -37,6 +39,8 @@ const routes: Routes = [
     SidebarComponent,
     SidebarLinkComponent,
     ContactComponent,
+    TechnoElementComponent,
+    TechnosComponent,
   ],
   imports: [
     BrowserModule,
